@@ -1,4 +1,4 @@
-const on = require(__dirname + '/../on'), fs = require('fs')
+const on = require(__dirname + '/../on'), fs = require('fs'), download = require(__dirname + '/../../download')
 const topics = JSON.parse(fs.readFileSync(__dirname + '/topics.json'))
 var stage = 0, gameHost, players, quitting = false, rounds, currentRound, currentPlayer, inGame, availableTopics, scores, currentTopic, timeout
 
