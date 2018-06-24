@@ -13,7 +13,7 @@ var app = express()
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.set('view engine', 'ejs')
-app.listen(1234)
+
 app.get('/', (req, res)=>{
     res.render('fileReq')
 })
@@ -37,3 +37,5 @@ app.post('/', urlencodedParser, (req, res)=>{
         }, 2000)
     }
 })
+
+app.listen(3000)
