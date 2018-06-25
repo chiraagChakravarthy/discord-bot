@@ -15,6 +15,11 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res)=>{
+    client.channels.get('457201559772594211').send('Home')
+    res.render('fileReq')
+})
+
+app.get('/test', (req, res)=>{
     client.channels.get('457201559772594211').send('Test')
     res.render('fileReq')
 })
